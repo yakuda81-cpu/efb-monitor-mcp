@@ -1,0 +1,40 @@
+{
+  "name": "efb-monitor-mcp",
+  "version": "1.0.0",
+  "description": "전자금융업 등록/말소 현황 조회 MCP 서버 - 금융감독원 FINE 포털 데이터 자동 수집",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "efb-monitor-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch"
+  },
+  "keywords": [
+    "mcp",
+    "전자금융업",
+    "금융감독원",
+    "FINE",
+    "등록현황",
+    "말소현황",
+    "PG",
+    "선불",
+    "직불",
+    "ESCROW",
+    "EBPP"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/node": "^22.0.0"
+  }
+}
