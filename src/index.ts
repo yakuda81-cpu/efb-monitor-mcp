@@ -72,7 +72,7 @@ interface EFinanceData {
 
 function createFetchOptions(
   accept?: string,
-): { headers: Record<string, string>; signal: AbortSignal } {
+): { headers: Record<string, string>; signal: AbortSignal; redirect: RequestRedirect } {
   const controller = new AbortController();
   setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
 
@@ -83,7 +83,7 @@ function createFetchOptions(
     headers["Accept"] = accept;
   }
 
-  return { headers, signal: controller.signal };
+  return { headers, signal: controller.signal, redirect: "error" };
 }
 
 // ============================================================
