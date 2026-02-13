@@ -10,7 +10,10 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
-    "dev": "tsc --watch"
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "keywords": [
     "mcp",
@@ -34,7 +37,9 @@
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@vitest/coverage-v8": "^4.0.18",
     "typescript": "^5.7.0",
-    "@types/node": "^22.0.0"
+    "vitest": "^4.0.18"
   }
 }

@@ -6,3 +6,6 @@ dist
 # Temp files
 *.xlsx
 nul
+
+# Test
+coverage
